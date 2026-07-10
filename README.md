@@ -1,10 +1,10 @@
 # AI Recipe Parser
 
-An intelligent recipe extraction tool that uses OpenAI's GPT-4o-mini to parse recipe images and convert them into structured markdown documents.
+An intelligent recipe extraction tool that uses OpenAI's GPT-4o-mini to parse images of recipe text and convert them into structured markdown documents.
 
 ## Features
 
-- Extract recipes from images using AI vision
+- Extract recipe text from images using AI vision
 - Automatically structure recipes into markdown format
 - Parse ingredients with quantities and units
 - Extract or estimate prep and cook times
