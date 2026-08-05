@@ -31,8 +31,10 @@ class RecipeData(BaseModel):
         description="Step-by-step cooking instructions in order"
     )
     estimated_calories: str = Field(
-        description="Estimated calories per serving if "
-        "mentioned, otherwise 'Not specified'"
+        description="Estimated number of calories per serving. Might be referred "
+        "to as 'cal', 'total cal', 'energy' or other related. If not provided make "
+        "an estimate based on ingredients and servings and specify if it "
+        "is an estimate."
     )
 
 
