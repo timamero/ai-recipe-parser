@@ -1,2 +1,3 @@
 run:
-		poetry run python recipe-parser.py
+		@echo "Running  AI Recipe Parser..."
+		poetry run python recipe-parser.py ${ARG_IMAGE}

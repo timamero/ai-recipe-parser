@@ -1,4 +1,5 @@
 import os
+import sys
 import base64
 from openai import OpenAI
 from pydantic import BaseModel, Field
@@ -45,16 +46,19 @@ def encode_image(image_path):
         return base64.b64encode(imagefile.read()).decode("utf-8")
 
 
+file_image_arg = sys.argv[1] if len(sys.argv) > 1 else None
+
 base_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(base_dir, "insta-recipe.jpg")
+image_path = os.path.join(base_dir, file_image_arg)
 base64_image = encode_image(image_path)
 
 prompt = """
     Extract the ingredients and steps from this recipe image into the requested JSON
     format. If the steps are missing, then infer from ingredients what the steps should
     be based on recipes with similar ingredients. If there is not title is missing, then
-    infer from the ingredients what the title should be. If the cook time or prep time
-    are missing, make an estimate and make it clear that time is an estimate.
+    infer from the ingredients what the title should be. If the cook time, prep time,
+    or calories are missing, make an estimate and make it clear that time is an
+    estimate.
 """
 
 print("Analyzing recipe screenshot with gpt-4o-mini...")
