@@ -55,13 +55,13 @@ An intelligent recipe extraction tool that uses OpenAI's GPT-4o-mini to parse im
 ### Running the Parser
 
 ```bash
-make run
+make run ARG_IMAGE=insta-recipe.jpg
 ```
 
 Or directly with Poetry:
 
 ```bash
-poetry run python recipe-parser.py
+poetry run python recipe-parser.py insta-recipe.jpg
 ```
 
 This will:
@@ -85,5 +85,5 @@ The script generates a markdown file named after the recipe (e.g., `easy_beef_cu
 
 See sample recipes:
 
-- [easy_beef_curry.md](easy_beef_curry.md)
+- [golden_curry_beef.md](golden_curry_beef.md)
 - [tiramisu.md](tiramisu.md)
