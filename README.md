@@ -11,6 +11,9 @@ An intelligent recipe extraction tool that uses OpenAI's GPT-4o-mini to parse im
 - Include estimated calorie information
 - Generate step-by-step cooking instructions
 
+## Demo
+https://github.com/user-attachments/assets/df44a7d9-2081-49cd-aad0-7370ecd193c5
+
 ## Tech Stack
 
 - **Language**: Python
